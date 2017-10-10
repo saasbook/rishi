@@ -4,4 +4,4 @@
 
 <a href="https://codeclimate.com/github/rails/rails"><img src="https://codeclimate.com/github/rails/rails/badges/issue_count.svg" /></a>
 
-https://travis-ci.org/AdeelCheema/rishi.svg?branch=master
+[![Build Status](https://travis-ci.org/AdeelCheema/rishi.svg?branch=master)](https://travis-ci.org/AdeelCheema/rishi)
