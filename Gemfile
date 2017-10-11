@@ -43,6 +43,7 @@ group :test do
   # gem 'rspec-rails', '2.14'
   gem 'rspec-rails', '3.4.2'
   gem 'simplecov', :require => false
+  gem "codeclimate-test-reporter", "~> 1.0.0"
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # basic imperative step defs
   gem 'database_cleaner' # required by Cucumber
