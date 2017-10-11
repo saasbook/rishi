@@ -22,3 +22,4 @@ This app will serve as the homepage of Project Rishi's Berkeley chapter. The goa
 More information about Project Rishi can be found here:
 
 http://www.projectrishi.org/
+https://www.facebook.com/ucbprojectrishi/
