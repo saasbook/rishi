@@ -205,6 +205,7 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     path_expander (1.0.2)
+    pg (0.18.2)
     phantomjs (2.1.1.0)
     procto (0.0.3)
     public_suffix (3.0.0)
@@ -357,6 +358,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   metric_fu
+  pg
   rails (= 4.2.9)
   rspec-rails (= 3.4.2)
   sass-rails (~> 5.0)
