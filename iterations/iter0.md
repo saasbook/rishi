@@ -1,6 +1,6 @@
 Entry Video: https://youtu.be/42kXdgX8E5A
 
-Nancy's Screencast:
+Nancy's Screencast: https://youtu.be/TSvDWRDOifw
 
 Nan's Screencast: https://youtu.be/5k6U-edtOF0
 
