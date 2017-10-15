@@ -5,11 +5,11 @@ Feature: Provide access to crowdfunding links for external users.
   I want to be able to contribute through a crowdfunding link.
   
 Scenario: Accessible crowdfunding link
-  When I follow the link to "GoFundMe!"
+  When I follow "Link to GoFundMe!"
   Then I should be redirected to "GoFundMe"
 
 Scenario: Change crowdfunding link
   Given I am an "executive member"
-  When I click on "Change crowdfunding link"
+  When I press "Change crowdfunding link"
   Then I should be on the "Crowdfunding edit page"
  
