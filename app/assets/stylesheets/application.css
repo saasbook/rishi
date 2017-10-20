@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ 
+ a:link,a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+li{
+    font-size: 150%;
+    list-style: none;
+    float: right;
+    padding:10px;
+}
