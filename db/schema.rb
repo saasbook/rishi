@@ -21,11 +21,12 @@ ActiveRecord::Schema.define(version: 20171020013905) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "members", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "wards", force: :cascade do |t|
     t.string "name"
   end
 
- create_table "members", force: :cascade do |t|
-    t.string "name"
- end
 end
