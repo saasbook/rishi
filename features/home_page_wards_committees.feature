@@ -7,11 +7,11 @@ So that I can learn which committees are involved with each ward
 Background: Comittees in database
 
   Given the following comittees exist:
-  | name               | wards_id      |
-  | Ecological Indian  | 1             |
-  | Corn, Bean, Squash | 1             |
-  | Toxic Gumbo        | 2             |
-  | Levees             | 2             |
+  | name               | wards_id  |
+  | Ecological Indian  | 1         |
+  | Corn, Bean, Squash | 1         |
+  | Toxic Gumbo        | 2         |
+  | Levees             | 2         |
   
 Scenario: Seeing the appropriate comittee under the associated wards
     When I am on the home page
