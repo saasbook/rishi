@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019000013) do
+ActiveRecord::Schema.define(version: 20171020001851) do
+
+  create_table "coordinates", force: :cascade do |t|
+    t.integer  "ward_id"
+    t.integer  "lat"
+    t.integer  "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "wards", force: :cascade do |t|
     t.string "name"
-    t.string "polygons", default: "--- []\n"
   end
 
 end
