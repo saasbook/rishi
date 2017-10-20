@@ -16,11 +16,11 @@ Background: Comittees in database
 Scenario: Seeing the appropriate comittee under the associated wards
     When I am on the home page
     Given that I am an "External" user
-    Then I should see "Ecological Indian" committee under "9th Ward" ward
-    And I should see "Toxic Gumbo" committee under "Ponchatrain" ward
+    Then the "Ecological Indian" committee has "1" as a ward id
+    And the "Toxic Gumbo" committee has "2" as a ward id
 
 Scenario: Seeing multiple committees for the same ward
     When I am on the home page
     Given that I am an "External" user
-    Then I should see "Corn, Bean, Squash" committee under "Fauborg Treme" ward 
-    And I should see "Levees" committee under "Fauborg Treme" ward
+    Then the "Toxic Gumbo" committee has "2" as a ward id 
+    And the "Levees" committee has "2" as a ward id
