@@ -11,6 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171020013905) do
+
+  create_table "coordinates", force: :cascade do |t|
+    t.integer  "ward_id"
+    t.float    "lat"
+    t.float    "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wards", force: :cascade do |t|
+    t.string "name"
+  end
 
 end
