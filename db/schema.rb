@@ -33,7 +33,4 @@ ActiveRecord::Schema.define(version: 20171020200756) do
     t.string "color"
   end
 
- create_table "members", force: :cascade do |t|
-    t.string "name"
- end
 end
