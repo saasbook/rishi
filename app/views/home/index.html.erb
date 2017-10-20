@@ -8,13 +8,13 @@
 
 <script type="text/javascript">
 
-var mapOptions = {
-  center: new google.maps.LatLng(31.1048,77.1734),
-  zoom: 7
-};
+// var mapOptions = {
+//   center: new google.maps.LatLng(31.1048,77.1734),
+//   zoom: 7
+// };
 
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
-  handler.addMarkers(<%=raw @marker_hash.to_json %>);
-});
+// handler = Gmaps.build('Google');
+// handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
+//   handler.addMarkers(<%=raw @marker_hash.to_json %>);
+// });
 </script>
