@@ -37,6 +37,8 @@ group :development, :test do
   # gem 'debugger'
   gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
   gem 'sqlite3'
+  gem 'gmaps4rails'
+  gem "figaro"
 end
 # setup Cucumber, RSpec, autotest support
 group :test do

@@ -1,4 +1,4 @@
-Given /the following comittees exist/ do |table|
+Given /the following wards exist/ do |table|
     pending
 end
 
