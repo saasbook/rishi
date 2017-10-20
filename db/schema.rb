@@ -25,4 +25,7 @@ ActiveRecord::Schema.define(version: 20171020013905) do
     t.string "name"
   end
 
+ create_table "members", force: :cascade do |t|
+    t.string "name"
+ end
 end

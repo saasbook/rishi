@@ -5,11 +5,8 @@ Feature: Provide levels of access to crowdfunding links for all users.
   I want to be able to contribute through a crowdfunding link.
   
 Scenario: Accessible crowdfunding link
+  Given I am on the home page
   When I follow "Link to GoFundMe!"
-  Then I should be redirected to "GoFundMe"
+  Then I should be redirected to the GoFundMe page
 
-Scenario: Change crowdfunding link
-  Given I am an "executive member"
-  When I press "Change crowdfunding link"
-  Then I should be on the "Crowdfunding edit page"
  
