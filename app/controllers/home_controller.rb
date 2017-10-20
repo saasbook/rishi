@@ -5,5 +5,6 @@ class HomeController < ApplicationController
       marker.lat coordinate.lat
       marker.lng coordinate.lng
     end
+    puts @marker_hash
   end
 end

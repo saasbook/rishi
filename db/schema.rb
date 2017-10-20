@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020001851) do
+ActiveRecord::Schema.define(version: 20171020013905) do
 
   create_table "coordinates", force: :cascade do |t|
     t.integer  "ward_id"
-    t.integer  "lat"
-    t.integer  "lng"
+    t.float    "lat"
+    t.float    "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

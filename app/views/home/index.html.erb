@@ -13,8 +13,6 @@ var mapOptions = {
 };
 
 handler = Gmaps.build('Google');
-console.log(<%raw @marker_hash.to_json %>);
-
 handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
   handler.addMarkers(<%=raw @marker_hash.to_json %>);
 });
