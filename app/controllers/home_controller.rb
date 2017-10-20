@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    Rails.logger.warn("### PUBLIC KEY IS #{ENV['google_api_key'].inspect}")
     @coordinates = Coordinate.all
     @marker_hash = Gmaps4rails.build_markers(@coordinates) do |coordinate, marker|
       marker.lat coordinate.lat
