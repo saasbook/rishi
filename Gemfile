@@ -58,6 +58,7 @@ group :production do
   gem 'pg'
   gem 'gmaps4rails'
   gem "figaro"
+  gem 'rails_12factor'
 end
 
 group :development do
