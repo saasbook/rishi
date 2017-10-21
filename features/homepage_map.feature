@@ -7,11 +7,18 @@ So that I can see what area of India they are deployed in.
 Background: wards have been added to database
   
   Given the following wards exist:
-  | name        | color        
-  | Ward 1      | red
-  | Ward 2      | yellow
-  | Ward 3      | green
-  | Ward 4      | blue
+  | name        | color   |       
+  | Ward 1      | red     |
+  | Ward 2      | yellow  |
+  | Ward 3      | green   |
+  | Ward 4      | blue    |
+  
+  Given the following coordinates exist:
+  | ward_id | lat       | lng       |
+  | 1       | 30.577421 | 77.504928 |
+  | 2       | 30.683129 | 77.631935 |
+  | 3       | 30.987524 | 77.313168 |
+  | 4       | 30.806854 | 77.066531 |
   
 Scenario: seeing all the wards on the map
   Given I am on the home page
