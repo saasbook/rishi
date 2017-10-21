@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
+<<<<<<< HEAD
     @api_key = ENV['google_api_key']
+=======
+>>>>>>> 1861af721740fafe3ecaddbba734a7459f6f6054
     @coordinates = Coordinate.all
     @polygons = []
     @marker_hash = Gmaps4rails.build_markers(@coordinates) do |coordinate, marker|
