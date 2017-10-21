@@ -7,8 +7,21 @@ a:link,a:visited {
 }
 
 li{
-    font-size: 150%;
+    font-size: 120%;
     list-style: none;
+}
+
+.navbar li{
+    font-size: 150%;
     float: right;
     padding:10px;
+}
+
+.wardsLst{
+    clear:right;
+    float:left;
+}
+
+.map_block{
+    float:left;
 }
