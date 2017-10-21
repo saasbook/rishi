@@ -28,16 +28,9 @@ ActiveRecord::Schema.define(version: 20171020200756) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "members", force: :cascade do |t|
+  create_table "wards", force: :cascade do |t|
     t.string "name"
     t.string "color"
   end
 
-<<<<<<< HEAD
-=======
-  create_table "wards", force: :cascade do |t|
-    t.string "name"
-  end
-
->>>>>>> 1861af721740fafe3ecaddbba734a7459f6f6054
 end
