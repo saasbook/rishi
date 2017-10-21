@@ -1,3 +1,27 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a:link,a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+li{
+    font-size: 120%;
+    list-style: none;
+}
+
+.navbar li{
+    font-size: 150%;
+    float: right;
+    padding:10px;
+}
+
+.wardsLst{
+    clear:right;
+    float:left;
+}
+
+.map_block{
+    float:left;
+}
