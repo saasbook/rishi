@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171026011328) do
+ActiveRecord::Schema.define(version: 20171026040357) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20171026011328) do
     t.datetime "updated_at",    null: false
     t.string   "image_url"
     t.integer  "coordinate_id"
+    t.integer  "ward_id"
   end
 
   add_index "committees", ["coordinate_id"], name: "index_committees_on_coordinate_id"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20171026011328) do
     t.float    "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "ward_id"
   end
 
   create_table "wards", force: :cascade do |t|
