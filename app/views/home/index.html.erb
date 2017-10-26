@@ -2,17 +2,19 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<div class="wardsLst" style="width:200px;">
-  <% @wards.each do |ward| %>
-  <ul>
-    <li class="has_cmt"><%= ward.name %></li>
-    <ul id="cmt">
-      <li>Water</li>
-      <li>Education</li>
-    </ul>
-  </ul>
-  <% end %>
-</div>
+<%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+
+<!--<div class="wardsLst" style="width:200px;">-->
+<!--  <% @wards.each do |ward| %>-->
+<!--  <ul>-->
+<!--    <li class="has_cmt"><%= ward.name %></li>-->
+<!--    <ul id="cmt">-->
+<!--      <li>Water</li>-->
+<!--      <li>Education</li>-->
+<!--    </ul>-->
+<!--  </ul>-->
+<!--  <% end %>-->
+<!--</div>-->
 
 
 <div class="map_block" style="width:1500px; margin:0 auto;">
