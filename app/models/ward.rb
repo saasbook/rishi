@@ -11,7 +11,8 @@ class Ward < ActiveRecord::Base
       return marker_hash
     end
     
-    def self.build_ward_overlay(regions)
+    def self.build_ward_overlay()
+      regions = []
       wards = Ward.all
       wards.each do |ward|
         ward_coordinates = ward.coordinates
