@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   private
   
   def current_user
-    puts User.all
     @current_user ||= User.find_by_uid(session[:user_id]) if session[:user_id]
   end
   helper_method :current_user
