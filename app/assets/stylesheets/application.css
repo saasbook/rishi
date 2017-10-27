@@ -14,7 +14,7 @@
  *= require_self
  */
  
- a:link,a:visited {
+a:link,a:visited {
     text-decoration: none;
     color: grey;
 }
