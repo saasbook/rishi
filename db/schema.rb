@@ -11,21 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171026012319) do
+ActiveRecord::Schema.define(version: 20171026040357) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name"
-    t.integer  "wards_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "image_url"
+    t.integer  "coordinate_id"
+    t.integer  "ward_id"
   end
 
+  add_index "committees", ["coordinate_id"], name: "index_committees_on_coordinate_id"
+
   create_table "coordinates", force: :cascade do |t|
-    t.integer  "ward_id"
     t.float    "lat"
     t.float    "lng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "ward_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,8 +41,12 @@ ActiveRecord::Schema.define(version: 20171026012319) do
   end
 
   create_table "wards", force: :cascade do |t|
-    t.string "name"
-    t.string "color"
+    t.string  "name"
+    t.integer "committee_id"
+    t.integer "coordinate_id"
   end
+
+  add_index "wards", ["committee_id"], name: "index_wards_on_committee_id"
+  add_index "wards", ["coordinate_id"], name: "index_wards_on_coordinate_id"
 
 end
