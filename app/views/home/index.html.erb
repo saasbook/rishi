@@ -29,7 +29,7 @@ var mapOptions = {
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
   handler.addMarkers(<%=raw @marker_hash.to_json %>);
-  handler.addPolygons(<%=raw @polygons.to_json%>,{strokeColor: '#FF0000', fillColor: '#FF0000'});
+  handler.addPolygons(<%=raw @regions.to_json%>,{strokeColor: '#FF0000', fillColor: '#FF0000'});
   handler.fitMapToBounds();
 });
 </script>
