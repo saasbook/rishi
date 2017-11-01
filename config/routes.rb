@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   resources 'members'
-  
+  resources 'committees'
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   delete 'signout', to: 'sessions#destroy', as: 'signout'
