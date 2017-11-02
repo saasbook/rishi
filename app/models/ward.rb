@@ -1,13 +1,15 @@
 class Ward < ActiveRecord::Base
     has_many :committees
     has_many :coordinates
-    
+
+
     def self.build_markers
       wards = Ward.all
       #coordinates = Coordinate.all
       marker_hash = Gmaps4rails.build_markers(wards) do |ward, marker|
         marker.lat ward.ward_lat
         marker.lng ward.ward_long
+        marker.infowindow "contentString"
       end
       return marker_hash
     end
@@ -22,5 +24,4 @@ class Ward < ActiveRecord::Base
         regions.push(@ward_marker_hash)
       return regions
     end
-    
 end
