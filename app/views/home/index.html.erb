@@ -21,14 +21,19 @@
  
 <script type="text/javascript">
 var mapOptions = {
-  center: new google.maps.LatLng(31.1048,77.1734),
-  zoom: 7
+  //center: new google.maps.LatLng(31.1048,77.1734),
+  center: new google.maps.LatLng(30.560554149332777, 77.52290278673172),
+  zoom: 13
 };
 
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
   handler.addMarkers(<%=raw @marker_hash.to_json %>);
-  handler.addPolygons(<%=raw @regions.to_json%>,{strokeColor: '#FF0000', fillColor: '#FF0000'});
+  handler.addPolygons(<%=raw @regions_1.to_json%>,{strokeColor: '#FF0000', fillColor: '#FF0000'});
+  handler.addPolygons(<%=raw @regions_2.to_json%>,{strokeColor: '#0000FF', fillColor: '#0000FF'});
+  handler.addPolygons(<%=raw @regions_3.to_json%>,{strokeColor: '#228B22', fillColor: '#228B22'});
+  handler.addPolygons(<%=raw @regions_4.to_json%>,{strokeColor: '#FFD700', fillColor: '#FFD700'});
+  handler.addPolygons(<%=raw @regions_5.to_json%>,{strokeColor: '#FF4500', fillColor: '#FF4500'});
   handler.fitMapToBounds();
 
 });
