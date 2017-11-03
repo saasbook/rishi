@@ -9,7 +9,6 @@ class Ward < ActiveRecord::Base
       marker_hash = Gmaps4rails.build_markers(wards) do |ward, marker|
         marker.lat ward.ward_lat
         marker.lng ward.ward_long
-        marker.infowindow "contentString"
       end
       return marker_hash
     end
