@@ -1,3 +1,7 @@
+<% if !current_user.nil? and current_user.role.eql? "internal" %>
+    <%= puts "my id: "+current_user.uid %>
+    <h1>progress</h1>
+<% end %>
 <%= @name %>
 <br />
 <%= @text %>

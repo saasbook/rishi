@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'about', to: 'home#about'
   get 'signin', to: 'home#authen'
-  get 'home/back'
   get 'home/index'
   root 'home#index'
   resources 'members'
