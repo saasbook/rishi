@@ -7,7 +7,7 @@ So that I can learn which committees are involved with each ward
 Background: Comittees in database
 
   Given the following comittees exist:
-  | name               | wards_id  |
+  | name               | ward_id   |
   | Ecological Indian  | 1         |
   | Corn, Bean, Squash | 1         |
   | Toxic Gumbo        | 2         |

@@ -15,8 +15,3 @@ Then /I should see ward "(.*)" on the map/ do |ward|
     bool.should be(true)
 end
 
-Then /I should see ward "(.*)" highlighted with "(.*)"/ do |ward, color|
-    puts(ward)
-    expect(Ward.find_by_name(ward).color).to eq(color)
-    #expect(true)
-end

@@ -5,10 +5,13 @@ Given /the following comittees exist/ do |committee_table|
 end
 
 Given /that I am an "(.*)" user/ do |member|
-  # Fill in once authentication is done.
-  expect(true)
+  if member.eql? "External"
+    step "I am not logged in"
+  elsif member.eql? "Internal"
+    step "I am logged in as an internal user"
+  end
 end
 
 Then /the "(.*)" committee has "(.*)" as a ward id/ do |committee, ward|
-  expect(Committee.find_by_name(committee).wards_id).to eq(ward.to_i)
+  expect(Committee.find_by_name(committee).ward_id).to eq(ward.to_i)
 end
