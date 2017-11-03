@@ -39,6 +39,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'gmaps4rails'
   gem "figaro"
+  gem 'omniauth-google-oauth2'
 end
 # setup Cucumber, RSpec, autotest support
 group :test do
@@ -52,6 +53,7 @@ group :test do
   gem 'autotest-rails'
   gem 'factory_girl_rails' # if using FactoryGirl
   gem 'metric_fu'        # collect code metrics
+  gem 'database_cleaner'
 end
 
 group :production do
@@ -59,6 +61,7 @@ group :production do
   gem 'gmaps4rails'
   gem "figaro"
   gem 'rails_12factor'
+  gem 'omniauth-google-oauth2'
 end
 
 group :development do
