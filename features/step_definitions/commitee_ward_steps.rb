@@ -5,8 +5,11 @@ Given /the following comittees exist/ do |committee_table|
 end
 
 Given /that I am an "(.*)" user/ do |member|
-  page.driver.submit :delete, "/signout", {}
-  page.should have_content("Sign in")
+  if member.eql? "External"
+    step "I am not logged in"
+  elsif member.eql? "Internal"
+    step "I am logged in as an internal user"
+  end
 end
 
 Then /the "(.*)" committee has "(.*)" as a ward id/ do |committee, ward|
