@@ -19,16 +19,16 @@ class HomeController < ApplicationController
   def about
   end
   
-  def authen
-    session[:return_to] = request.referer
-    render :layout => 'authorize'
-  end
+  # def authen
+  # #   session[:return_to] = request.referer
+  # #   render :layout => 'authorize'
+  # # end
   
-  def back
-    if session[:return_to]
-      redirect_to session[:return_to]
-    else
-      redirect_to root_path
-    end
-  end
+  # def back
+  #   if session[:return_to]
+  #     redirect_to session[:return_to]
+  #   else
+  #     redirect_to root_path
+  #   end
+  # end
 end

@@ -23,4 +23,11 @@ describe Ward do
             expect(@regions_2.size).to eq(0)
         end
     end
+    describe "two specs here" do
+  it "passes" do
+  end
+
+  it "passes too" do
+  end
+end
 end
