@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102021619) do
+
+ActiveRecord::Schema.define(version: 20171104004538) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name"
@@ -36,9 +37,9 @@ ActiveRecord::Schema.define(version: 20171102021619) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
-    t.string   "role"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "role"
   end
 
   create_table "wards", force: :cascade do |t|
