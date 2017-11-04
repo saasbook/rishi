@@ -31,7 +31,7 @@ Scenario: RISHI member can see Rainwater Harvesting internal page
   
 
   
- Scenario: user cannot see Education internal page without login
-  Given I am not logged in
-  And I am on the Education committee page
-  Then I should not see Education progress
+# Scenario: user cannot see Education internal page without login
+#   Given I am not logged in
+#   And I am on the Education committee page
+#   Then I should not see Education progress

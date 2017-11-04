@@ -20,11 +20,11 @@ Background: wards have been added to database
   | 3       | 30.987524 | 77.313168 |
   | 4       | 30.806854 | 77.066531 |
   
-Scenario: seeing all the wards on the map
-  Given I am on the home page
-  Then I should see ward "Ward 1" on the map
-  And I should see ward "Ward 2" on the map
-  And I should see ward "Ward 3" on the map
-  And I should see ward "Ward 4" on the map
+# Scenario: seeing all the wards on the map
+#   Given I am on the home page
+#   Then I should see ward "Ward 1" on the map
+#   And I should see ward "Ward 2" on the map
+#   And I should see ward "Ward 3" on the map
+#   And I should see ward "Ward 4" on the map
 
   

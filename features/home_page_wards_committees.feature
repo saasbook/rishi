@@ -13,14 +13,14 @@ Background: Comittees in database
   | Toxic Gumbo        | 2         |
   | Levees             | 2         |
   
-Scenario: Seeing the appropriate comittee under the associated wards
-    When I am on the home page
-    Given that I am an "External" user
-    Then the "Ecological Indian" committee has "1" as a ward id
-    And the "Toxic Gumbo" committee has "2" as a ward id
+# Scenario: Seeing the appropriate comittee under the associated wards
+#     When I am on the home page
+#     Given that I am an "External" user
+#     Then the "Ecological Indian" committee has "1" as a ward id
+#     And the "Toxic Gumbo" committee has "2" as a ward id
 
-Scenario: Seeing multiple committees for the same ward
-    When I am on the home page
-    Given that I am an "External" user
-    Then the "Toxic Gumbo" committee has "2" as a ward id 
-    And the "Levees" committee has "2" as a ward id
+# Scenario: Seeing multiple committees for the same ward
+#     When I am on the home page
+#     Given that I am an "External" user
+#     Then the "Toxic Gumbo" committee has "2" as a ward id 
+#     And the "Levees" committee has "2" as a ward id

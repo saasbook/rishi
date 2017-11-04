@@ -3,6 +3,9 @@ class Ward < ActiveRecord::Base
     has_many :coordinates
     
     def self.build_ward_overlay(ward)
+      if (ward == nil)  then
+        return
+    end
       regions = []
       ward_coordinates = ward.coordinates
       @ward_marker_hash = Gmaps4rails.build_markers(ward_coordinates) do |coordinate, marker|
