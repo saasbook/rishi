@@ -2,9 +2,9 @@
 
 
 ## Project Statistics
-[![Maintainability](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/maintainability)](https://codeclimate.com/github/AdeelCheema/rishi/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/maintainability)](https://codeclimate.com/github/AdeelCheema/Berkeley-Rishi/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/test_coverage)](https://codeclimate.com/github/AdeelCheema/rishi/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/test_coverage)](https://codeclimate.com/github/AdeelCheema/Berkeley-Rishi/test_coverage)
 
 [![Build Status](https://travis-ci.org/AdeelCheema/Berkeley-Rishi.svg?branch=master)](https://travis-ci.org/AdeelCheema/Berkeley-Rishi)
 
