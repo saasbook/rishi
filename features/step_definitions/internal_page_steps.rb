@@ -6,7 +6,7 @@ end
         
 Given /I am not logged in/ do 
     page.driver.submit :delete, "/signout", {}
-    page.should have_content("Sign in")
+    page.should have_content("SIGN IN")
 end
 
 Given /I am logged in as an (.*) user/ do |user|

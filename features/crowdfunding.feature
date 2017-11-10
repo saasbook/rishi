@@ -6,7 +6,7 @@ Feature: Provide levels of access to crowdfunding links for all users.
   
 Scenario: Accessible crowdfunding link
   Given I am on the home page
-  # When I press "DONATE"
-  # Then I should be redirected to the GoFundMe page
+  When I follow "DONATE"
+  Then I should be redirected to the GoFundMe page
 
  
