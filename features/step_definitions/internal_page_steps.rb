@@ -10,7 +10,8 @@ Given /I am not logged in/ do
 end
 
 Given /I am logged in as an (.*) user/ do |user|
-    visit '/auth/google_oauth2'
+    pending
+    # visit '/auth/google_oauth2'
 end
 
 Then /I should (not )?see (.*) progress/ do |no, committee|
