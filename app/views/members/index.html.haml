@@ -1,0 +1,14 @@
+%h1 Add New Marker
+
+= form_tag member_coordinates_path(:member_id => @member.id) do
+
+   = label :coordinate, :lat, 'Latitude'
+   = text_field :coordinate, 'latitude'
+   
+   = label :coordinate, :lng, 'Longitude'
+   = text_field :coordinate, 'longitude'
+   
+   = label :coordinate, :ward, 'Ward'
+   = text_field :coordinate, 'ward'
+   
+   = submit_tag 'Add Marker'

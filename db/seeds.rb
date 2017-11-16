@@ -1372,7 +1372,6 @@ coords_2 =   [
           Coordinate.create(lat:30.56303235010654, lng:77.49707847833633),
           Coordinate.create(lat:30.563173233803628, lng:77.49704092741013)
           
-          
           ]
           
 coords_3 = [
