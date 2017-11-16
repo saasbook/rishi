@@ -11,7 +11,11 @@
 	<div class='header' id='header'>
 		<ul>
 		  
-		  <li><a id='signinNav' href='/signin'>SIGN IN</a></li>
+		  <% if current_user %>
+		  	<li> <%=link_to "SIGN OUT", signout_path, method: :delete%> </li>
+    	<% else %>
+      	<li><%=link_to "SIGN IN", "/signin"%></li>
+    	<% end %>
 		  
 		  <li><a id='donateNav' href='http://www.projectrishi.org/donate' target='_blank'>DONATE</a></li>
 
@@ -27,28 +31,6 @@
 		<img src=assets/logo_with_title.png></img>
 	</div></a>
 </body>
-
-<!--<div  class="navigationbar" style='width: 1400px;height:75px;'>-->
-<!--  <ul  class="navbar">-->
-<!--    <a href='/'><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/12718090_652404198230864_2893964534720288834_n.png?oh=ea9ea8db220d863ba6d19a0446d2f03e&oe=5A833AED" style="width:80px;height:80px;"></a>-->
-<!--    <li><%=link_to "GoFundMe!", "https://www.gofundme.com/", id: "Link to GoFundMe!"%></li>-->
-<!--    <li><%=link_to "Members", "/members"%></li>-->
-<!--    <li><%=link_to "About", "/about"%></li>  -->
-<!--    <% if current_user %>-->
-
-<!--      <li class="loggedin">-->
-<!--      <button onclick="myFunction()" class="dropbtn">Hi <%= current_user.name%>!</button>-->
-<!--      <div id="myDropdown" class="dropdown-content">-->
-<!--        <%= link_to "Sign out", signout_path, method: :delete%>-->
-<!--      </div>-->
-<!--      </li>-->
-      
-<!--    <% else %>-->
-<!--      <li><%=link_to "Sign in", "/signin"%></li>-->
-<!--    <% end %>-->
-<!--  </ul>-->
-<!--</div>-->
-<!--<body>-->
 
 <%= yield %>
 
