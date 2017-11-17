@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+	
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  This is an alert box.
+</div>
+	
 <head>
   <title>Rishi</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -10,6 +16,9 @@
 <body>
 	<div class='header' id='header'>
 		<ul>
+			<a href='./index.html'><div class='logo'>
+				<img src=assets/logo_with_title.png></img>
+			</div></a>
 		  
 		  <% if current_user %>
 		  	<li> <%=link_to "SIGN OUT", signout_path, method: :delete%> </li>
@@ -27,9 +36,6 @@
 		  
 		</ul>
 	</div>
-	<a href='./index.html'><div class='logo'>
-		<img src=assets/logo_with_title.png></img>
-	</div></a>
 </body>
 
 <%= yield %>
