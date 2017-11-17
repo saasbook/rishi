@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html>
-	
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  This is an alert box.
-</div>
-	
 <head>
   <title>Rishi</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+	<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  This is an alert box.
+</div>
 
 <body>
 	<div class='header' id='header'>
 		<ul>
-			<a href='./index.html'><div class='logo'>
-				<img src=assets/logo_with_title.png></img>
-			</div></a>
 		  
 		  <% if current_user %>
 		  	<li> <%=link_to "SIGN OUT", signout_path, method: :delete%> </li>
@@ -26,16 +21,19 @@
       	<li><%=link_to "SIGN IN", "/signin"%></li>
     	<% end %>
 		  
-		  <li><a id='donateNav' href='http://www.projectrishi.org'>DONATE</a></li>
+		  <li><a id='donateNav' href='http://www.projectrishi.org/donate' target='_blank'>DONATE</a></li>
 
 		  <li><a id='aboutNav'>ABOUT</a></li>
 
 		  <li><a id='travelNav' href='./travel.html'>TRAVEL</a></li>
 
 		  <li><a id='projectsNav' href='./projects.html'>PROJECTS</a></li>
+		  <a href='./index.html'><div class='logo'>
+			<img src=assets/logo_with_title.png></img>
 		  
 		</ul>
 	</div>
+	</div></a>
 </body>
 
 <%= yield %>
