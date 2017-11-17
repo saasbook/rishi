@@ -11,11 +11,6 @@ li{
     list-style: none;
 }
 
-.wardsLst{
-    clear:right;
-    float:left;
-}
-
 #auth{
     padding-top:0px;
     padding-left:20px;
@@ -27,8 +22,29 @@ li{
     cursor: pointer;
     outline-color: white;
     padding:10px;
+    margin-top: 15px;
 }
 #authen{
     background-color:#49DC4B;
-    
+}
+#authenc{
+    background-color:#49DC4B;
+}
+
+h1{
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	cursor: hand;
+	color: gray;
+
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+body {
+	color: white;
+	font-size: 17px;
+	font-family: 'Lato', sans-serif;
 }
