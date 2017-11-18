@@ -1,7 +1,13 @@
-<div id="auth"><h1>Sign in with Google</h1>
-<h2>RISHI would like to get permission to your Google account</h2>
+<div id="authen_div">
+<h1>Sign in with Google</h1>
+
+<body id="internal">RISHI would like to get permission to your Google account.</body>
+<body id="internal">Currently, accounts are only supported for internal club members.</body>
+<body id="internal">Please contact an executive member to get permission to access the internal site.</body>
+
+
 <form>
   <input class="auth" id="authen" type="button" value="Authorize" onclick="window.location.href='/auth/google_oauth2'" />
-  <input class="auth" type="button" value="Cancel" onclick="window.location.href='home/back'" />
+  <input class="auth" id="authenc" type="button" value="Cancel" onclick="window.location.href='/'" />
 </form>
 </div>
