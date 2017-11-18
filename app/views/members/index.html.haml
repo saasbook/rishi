@@ -1,14 +1,22 @@
+- if flash[:notice]
+  .alert
+  %span.closebtn{:onclick => "this.parentElement.style.display='none';"} ×
+  #{flash[:notice]}
+      
 %h1 Add New Marker
 
 = form_tag member_coordinates_path(:member_id => @member.id) do
 
-   = label :coordinate, :lat, 'Latitude'
-   = text_field :coordinate, 'latitude'
-   
-   = label :coordinate, :lng, 'Longitude'
-   = text_field :coordinate, 'longitude'
-   
-   = label :coordinate, :ward, 'Ward'
-   = text_field :coordinate, 'ward'
-   
-   = submit_tag 'Add Marker'
+  = label :coordinate, :lat, 'Latitude'
+  = text_field :coordinate, 'latitude'
+  
+  = label :coordinate, :lng, 'Longitude'
+  = text_field :coordinate, 'longitude'
+
+  = label :ward, :ward_name, 'Ward Name'
+  = text_field :ward, 'ward_name'
+
+  = label :marker, :name, 'Marker Name'
+  = text_field :marker, 'marker_name'
+
+  = submit_tag 'Add Marker'
