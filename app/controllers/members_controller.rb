@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+    # Passes in @member to form_tag in /members.
     before_action :check_login
 
     def check_login
@@ -14,6 +15,8 @@ class MembersController < ApplicationController
     end
      
     def index
+        user_id = session[:user_id]
+        @member = User.find_by_uid(user_id)
+        @committees = Committee.all
     end
-
 end

@@ -40,6 +40,7 @@ group :development, :test do
   gem 'gmaps4rails'
   gem "figaro"
   gem 'omniauth-google-oauth2'
+  gem 'haml'
 end
 # setup Cucumber, RSpec, autotest support
 group :test do
@@ -62,6 +63,7 @@ group :production do
   gem "figaro"
   gem 'rails_12factor'
   gem 'omniauth-google-oauth2'
+  gem 'haml'
 end
 
 group :development do

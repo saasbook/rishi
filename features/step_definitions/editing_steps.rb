@@ -1,3 +1,7 @@
+And /^I am in the members page/ do
+    visit(members_path)
+end
+
 When /^I add a marker to "(.*)"/ do |marker_object|
     pending
 end
@@ -29,5 +33,4 @@ end
 Then /^that coordinate for "(.*)" should have an updated longitude on the map/ do |marker_object|
     pending
 end
-
 
