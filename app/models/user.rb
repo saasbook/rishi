@@ -11,15 +11,8 @@ class User < ActiveRecord::Base
                 user.oauth_token = auth.credentials.token
                 user.oauth_expires_at = Time.at(auth.credentials.expires_at)
             end
-            
-            # right now for cucumber test
-            # fix once get user data
-            if user.name.eql? 'internal'
-                user.role = 'internal'
-            elsif user.name.eql? 'external'
-                user.role = 'external'
-            end
             if user.valid?
+                user.role = find_role(user.email)
                 user.save!
             end
         end
@@ -37,4 +30,8 @@ class User < ActiveRecord::Base
         end
     end
     
+    def self.find_role(email)
+        return UserList.where(:email => email).first.role
+    end
+        
 end
