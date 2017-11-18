@@ -1,0 +1,11 @@
+%h1 Edit Existing Marker
+
+= form_tag member_coordinate_path(:member_id => @member.id, :id => @coordinate.id), :method => :put do
+
+  = label :coordinate, :lat, 'Latitude'
+  = text_field :coordinate, 'lat'
+  
+  = label :coordinate, :lng, 'Longitude'
+  = text_field :coordinate, 'lng'
+
+  = submit_tag 'Update Marker Coordinate'

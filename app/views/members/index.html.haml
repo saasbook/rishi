@@ -20,3 +20,22 @@
   = text_field :marker, 'marker_name'
 
   = submit_tag 'Add Marker'
+  
+%table#markers
+  %thead
+    %tr
+      %th Ward
+      %th Name
+      %th Latitude
+      %th Longitude
+      %th Delete
+  %tbody
+    - @committees.each do |comm|
+      - comm.coordinates.each do |coord|
+        %tr
+          %td= comm.ward.name
+          %td= comm.name
+          %td= coord.lat
+          %td= coord.lng
+          %td= button_to 'Delete', member_coordinate_path(:member_id => @member.id, :id => coord.id), :method => :delete, :confirm => 'Are you sure?'
+          %td= link_to 'Edit', edit_member_coordinate_path(:member_id => @member.id, :id => coord.id)

@@ -3,5 +3,6 @@ class MembersController < ApplicationController
     def index
         user_id = session[:user_id]
         @member = User.find_by_uid(user_id)
+        @committees = Committee.all
     end
 end

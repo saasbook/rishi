@@ -1,4 +1,8 @@
 class CoordinatesController < ApplicationController
+    def coordinate_params
+        params.require(:coordinate).permit(:lat, :lng)
+    end
+    
     def create
         input_coordinate = params[:coordinate]
         input_lat = input_coordinate[:latitude]
@@ -31,5 +35,24 @@ class CoordinatesController < ApplicationController
             comm.save!
             redirect_to root_path
         end
+    end
+    
+    def destroy 
+        id = params[:id]
+        coord = Coordinate.find_by_id(id)
+        coord.destroy!
+        redirect_to root_path
+    end
+    
+    def edit
+        @coordinate = Coordinate.find(params[:id])
+        @member = User.find(params[:member_id])
+    end
+    
+    def update
+        @coordinate = Coordinate.find(params[:id])
+        @coordinate.update_attributes!(coordinate_params)
+        flash[:notice] = "Marker was successfully updated."
+        redirect_to root_path
     end
 end
