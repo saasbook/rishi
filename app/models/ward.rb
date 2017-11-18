@@ -2,7 +2,6 @@ class Ward < ActiveRecord::Base
     has_many :committees
     has_many :coordinates
     
-    
     def coordinates_list()
       coords = self.coordinates
       list_of_coords = []

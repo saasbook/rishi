@@ -10,6 +10,7 @@ Ward.destroy_all
 Committee.destroy_all
 Coordinate.destroy_all
 
+#education_committee = Committee.create(name: "Education")
 ward_1 = Ward.create(name: "Ward 1", ward_lat: 30.576228338266397, ward_long: 77.46983528137207)
 ward_2 = Ward.create(name: "Ward 2", ward_lat: 30.56348964398409, ward_long: 77.49717772006989)
 ward_3 = Ward.create(name: "Ward 3", ward_lat: 30.564755274387373, ward_long: 77.51287937164307)
