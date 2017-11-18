@@ -32,6 +32,5 @@ class User < ActiveRecord::Base
     
     def self.find_role(email)
         return UserList.where(:email => email).first.role
-    end
-        
+    end        
 end
