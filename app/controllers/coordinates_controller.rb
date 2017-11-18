@@ -4,13 +4,10 @@ class CoordinatesController < ApplicationController
     end
     
     def create
-        input_coordinate = params[:coordinate]
-        input_lat = input_coordinate[:latitude]
-        input_lng = input_coordinate[:longitude]
-        input_ward = params[:ward]
-        input_ward_name = input_ward[:ward_name]
-        input_marker = params[:marker]
-        input_marker_name = input_marker[:marker_name]
+        input_lat = params[:coordinate][:latitude]
+        input_lng = params[:coordinate][:longitude]
+        input_ward_name = params[:ward][:ward_name]
+        input_marker_name = params[:marker][:marker_name]
         
         if Coordinate.exists?(:lat => input_lat, :lng => input_lng)
             flash[:notice] = 'Marker already exists at this coordinate'
