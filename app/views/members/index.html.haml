@@ -19,7 +19,7 @@
   = label :marker, :name, 'Marker Name'
   = text_field :marker, 'marker_name'
 
-  = submit_tag 'Add Marker'
+  = submit_tag 'Add Marker', :id => "markers_submit"
   
 %table#markers
   %thead
@@ -38,6 +38,6 @@
           %td= comm.name
           %td= coord.lat
           %td= coord.lng
-          %td= button_to 'Delete', member_coordinate_path(:member_id => @member.id, :id => coord.id), :method => :delete, :confirm => 'Are you sure?'
-          %td= link_to 'Edit', edit_member_coordinate_path(:member_id => @member.id, :id => coord.id)
+          %td= button_to 'Delete', member_coordinate_path(:member_id => @member.id, :id => coord.id), :method => :delete, :confirm => 'Are you sure?', :id => 'delete_marker'
+          %td= link_to 'Edit', edit_member_coordinate_path(:member_id => @member.id, :id => coord.id), :id => 'edit_marker'
 = link_to 'Back to home page', root_path
