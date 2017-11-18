@@ -1,14 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
+UserList.destroy_all
 Ward.destroy_all
 Committee.destroy_all
 Coordinate.destroy_all
+
+UserList.create(email: "acheema@berkeley.edu", role:"executive")
+UserList.create(email: "niraj.a.rao@berkeley.edu", role:"executive")
+UserList.create(email: "akkhazan@berkeley.edu", role:"executive")
+UserList.create(email: "hunyaalakhani@berkeley.edu", role:"executive")
+UserList.create(email: "jnnancy233@berkeley.edu", role:"executive")
+UserList.create(email: "phari@berkeley.edu", role:"executive")
+
+
+
 
 ward_1 = Ward.create(name: "Ward 1", ward_lat: 30.576228338266397, ward_long: 77.46983528137207)
 ward_2 = Ward.create(name: "Ward 2", ward_lat: 30.56348964398409, ward_long: 77.49717772006989)

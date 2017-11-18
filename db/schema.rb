@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171118001350) do
+ActiveRecord::Schema.define(version: 20171117230811) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20171118001350) do
   end
 
   add_index "coordinates", ["committee_id"], name: "index_coordinates_on_committee_id"
+  create_table "user_lists", force: :cascade do |t|
+    t.string   "email"
+    t.string   "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
@@ -42,6 +48,7 @@ ActiveRecord::Schema.define(version: 20171118001350) do
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.string   "role"
+    t.string   "email"
   end
 
   create_table "wards", force: :cascade do |t|
