@@ -1,5 +1,3 @@
-
-
 Given /the following users exist/ do |user_table|
     user_table.hashes.each do |user|
         User.create(user)
@@ -12,8 +10,7 @@ Given /I am not logged in/ do
 end
 
 Given /I am logged in as an (.*) user/ do |user|
-    pending
-    # visit '/auth/google_oauth2'
+    visit '/auth/google_oauth2'
 end
 
 Then /I should (not )?see (.*) progress/ do |no, committee|
