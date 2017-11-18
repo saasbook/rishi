@@ -7,10 +7,9 @@ class Ward < ActiveRecord::Base
       coords = self.coordinates
       list_of_coords = []
       coords.each do |c|
-        list_of_coords << {lat: c.lat, lng: c.lng}
+        list_of_coords << [c.lat, c.lng]
       end
       list_of_coords
     end
-    
     
 end

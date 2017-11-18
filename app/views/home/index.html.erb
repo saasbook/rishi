@@ -10,17 +10,6 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 
-<!--<div class="wardsLst" style="width:150px;">-->
-<!--  <% @wards.each do |ward| %>-->
-<!--  <ul>-->
-<!--    <li class="has_cmt"><%= ward.name %></li>-->
-<!--    <ul id="cmt">-->
-<!--      <li>Water</li>-->
-<!--      <li>Education</li>-->
-<!--    </ul>-->
-<!--  </ul>-->
-<!--  <% end %>-->
-<!--</div>-->
 
 
 <div id="map" style='width: 100%; height: 800px; margin:auto;'></div>
@@ -33,38 +22,43 @@ var markerGroups = {
 };
 var customIcons = {
     women: {
-        icon: 'https://vcresearch.berkeley.edu/sites/default/files/styles/faculty_photo_full/public/faculty/faculty-ArmandoFox.jpg?itok=LysnZhog'
+        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
     },
     water: {
-        icon: 'https://vcresearch.berkeley.edu/sites/default/files/styles/faculty_photo_full/public/faculty/faculty-ArmandoFox.jpg?itok=LysnZhog'
+        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
     }
 };
-var map;
 
 
 function load() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: new google.maps.LatLng(30.560554149332777, 77.52290278673172),
-        zoom: 13
+        zoom: 100
     });
     
-    var triangleCoords = [
-    {lat: 25.774, lng: -80.190},
-    {lat: 18.466, lng: -66.118},
-    {lat: 32.321, lng: -64.757},
-    {lat: 25.774, lng: -80.190}
-  ]
-  // Construct the polygon.
-    var bermudaTriangle = new google.maps.Polygon({
-        paths: triangleCoords,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.35
-    });
-    bermudaTriangle.setMap(map);
+    var regionCoords = [[]];
+    var polygons = []
     
+    for (i = 0; i < gon.regions.length; i++) {
+        regionCoords[i] = []
+        for (var j = 0; j < gon.regions[i].length; j++) {
+            regionCoords[i].push({
+                lat: gon.regions[i][j][0],
+                lng: gon.regions[i][j][1]
+            });
+        }
+        
+        polygons.push(new google.maps.Polygon({
+            paths: regionCoords[i],
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+        }));
+        polygons[polygons.length-1].setMap(map);
+    }
+
     var infoWindow = new google.maps.InfoWindow();
     var xml = parseXml(xmlStr); // data.responseXML;
     var markers = xml.documentElement.getElementsByTagName("marker");
@@ -138,22 +132,5 @@ function parseXml(str) {
 }
 
 var xmlStr = '<markers><marker name="water1" address="" lat="30.560554149332777" lng="77.52290278673172" type="water"/><marker name="women1" address="" lat="30.57" lng="77.524" type="women"/></markers>';
-/*
-var mapOptions = {
-  //center: new google.maps.LatLng(31.1048,77.1734),
-  center: new google.maps.LatLng(30.560554149332777, 77.52290278673172),
-  zoom: 13
-};
 
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
-  handler.addMarkers(<%=raw @marker_hash.to_json %>);
-  handler.addPolygons(<%=raw @regions_1.to_json%>,{strokeColor: '#FF0000', fillColor: '#FF0000'});
-  handler.addPolygons(<%=raw @regions_2.to_json%>,{strokeColor: '#FFA500', fillColor: '#FFA500'});
-  handler.addPolygons(<%=raw @regions_3.to_json%>,{strokeColor: '#00CC00', fillColor: '#00CC00'});
-  handler.addPolygons(<%=raw @regions_4.to_json%>,{strokeColor: '#0000FF', fillColor: '#0000FF'});
-  handler.addPolygons(<%=raw @regions_5.to_json%>,{strokeColor: '#EE82EE', fillColor: '#EE82EE'});
-  handler.fitMapToBounds();
-});
-*/
 </script>
