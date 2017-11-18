@@ -20,35 +20,42 @@ class CoordinatesController < ApplicationController
     end
     
     def create
-        
         input_lat = return_lat(params[:coordinate])
         input_lng = return_lng(params[:coordinate])
         input_ward_name = return_ward_name(params[:ward])
         input_marker_name = return_marker_name(params[:marker])
         
-        if Coordinate.exists?(:lat => input_lat, :lng => input_lng)
-            flash[:notice] = 'Marker already exists at this coordinate'
-            redirect_to members_path
-        else
-            if Ward.exists?(:name => input_ward_name)
-                ward = Ward.find_by_name(input_ward_name)
-            else
-                ward = Ward.create(:name => input_ward_name)
-            end
-            
+        if !Coordinate.exists?(:lat => input_lat, :lng => input_lng)
+            ward = Ward.create(:name => input_ward_name)
             coord = Coordinate.create(:lat => input_lat, :lng => input_lng)
-
-            if Committee.exists?(:name => input_marker_name) 
-                comm = Committee.find_by_name(input_marker_name)
-            else
-                comm = Committee.create(:name => input_marker_name)
-            end
-            
+            comm = Committee.create(:name => input_marker_name)
             comm.ward = ward
             comm.coordinates << coord
             comm.save!
-            redirect_to members_path
+        else
+            flash[:notice] = "Marker already exists at this coordinate"
         end
+        redirect_to members_path
+        
+        # if Coordinate.exists?(:lat => input_lat, :lng => input_lng)
+        #     flash[:notice] = 'Marker already exists at this coordinate'
+        #     redirect_to members_path
+        # else
+        #     if Ward.exists?(:name => input_ward_name)
+        #         ward = Ward.find_by_name(input_ward_name)
+        #     else
+        #         ward = Ward.create(:name => input_ward_name)
+        #     end
+        #     coord = Coordinate.create(:lat => input_lat, :lng => input_lng)
+        #     if Committee.exists?(:name => input_marker_name) 
+        #         comm = Committee.find_by_name(input_marker_name)
+        #     else
+        #         comm = Committee.create(:name => input_marker_name)
+        #     end
+        #     comm.ward = ward
+        #     comm.coordinates << coord
+        #     comm.save!
+        #     redirect_to members_path
     end
     
     def destroy 
