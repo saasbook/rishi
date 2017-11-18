@@ -33,7 +33,7 @@ class CoordinatesController < ApplicationController
             comm.ward = ward
             comm.coordinates << coord
             comm.save!
-            redirect_to root_path
+            redirect_to members_path
         end
     end
     
@@ -41,7 +41,7 @@ class CoordinatesController < ApplicationController
         id = params[:id]
         coord = Coordinate.find_by_id(id)
         coord.destroy!
-        redirect_to root_path
+        redirect_to members_path
     end
     
     def edit
@@ -53,6 +53,6 @@ class CoordinatesController < ApplicationController
         @coordinate = Coordinate.find(params[:id])
         @coordinate.update_attributes!(coordinate_params)
         flash[:notice] = "Marker was successfully updated."
-        redirect_to root_path
+        redirect_to members_path
     end
 end

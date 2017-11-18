@@ -29,6 +29,7 @@
       %th Latitude
       %th Longitude
       %th Delete
+      %th Edit
   %tbody
     - @committees.each do |comm|
       - comm.coordinates.each do |coord|
@@ -39,3 +40,4 @@
           %td= coord.lng
           %td= button_to 'Delete', member_coordinate_path(:member_id => @member.id, :id => coord.id), :method => :delete, :confirm => 'Are you sure?'
           %td= link_to 'Edit', edit_member_coordinate_path(:member_id => @member.id, :id => coord.id)
+= link_to 'Back to home page', root_path
