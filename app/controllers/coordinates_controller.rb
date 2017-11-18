@@ -3,11 +3,28 @@ class CoordinatesController < ApplicationController
         params.require(:coordinate).permit(:lat, :lng)
     end
     
+    def return_lat(param)
+        param[:latitude]
+    end
+    
+    def return_lng(param)
+        param[:longitude]
+    end
+    
+    def return_ward_name(param)
+        param[:ward_name]
+    end
+    
+    def return_marker_name(param)
+        param[:marker_name]
+    end
+    
     def create
-        input_lat = params[:coordinate][:latitude]
-        input_lng = params[:coordinate][:longitude]
-        input_ward_name = params[:ward][:ward_name]
-        input_marker_name = params[:marker][:marker_name]
+        
+        input_lat = return_lat(params[:coordinate])
+        input_lng = return_lng(params[:coordinate])
+        input_ward_name = return_ward_name(params[:ward])
+        input_marker_name = return_marker_name(params[:marker])
         
         if Coordinate.exists?(:lat => input_lat, :lng => input_lng)
             flash[:notice] = 'Marker already exists at this coordinate'
