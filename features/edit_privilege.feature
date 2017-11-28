@@ -16,6 +16,7 @@ Background: Wards, Committees, and Coordinates in database
     | Education           |
     | Rainwater Harvesting|
 
+
 @internal_test 
 Scenario: Inserting a marker
   Given I am logged in as an internal user

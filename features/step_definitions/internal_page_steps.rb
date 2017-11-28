@@ -1,3 +1,5 @@
+require "rack_session_access/capybara"
+
 Given /the following users exist/ do |user_table|
     user_table.hashes.each do |user|
         User.create(user)
@@ -10,13 +12,13 @@ Given /I am not logged in/ do
 end
 
 Given /I am logged in as an (.*) user/ do |user|
-    visit '/auth/google_oauth2'
+    UserList.create!(email: "exec@exec.com", role:"executive")
+    User.create!(uid: "102175608470407824779", email: "exec@exec.com")
+    page.set_rack_session(user_id: "102175608470407824779")
 end
 
 Then /I should (not )?see (.*) progress/ do |no, committee|
-    puts current_url
     @cmt = Committee.find_by_name(committee)
-    puts @cmt.id
     if no
         page.should_not have_content("progress")
     else 
