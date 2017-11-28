@@ -1,8 +1,8 @@
-Feature: external user can see what committees belong to what wards
+Feature: a user can see see all the committee pages
 
-As an external viewer of the site on the homepage 
-I want to be able to see the different committees on each ward that UC Berkeley Project Rishi serves 
-So that I can learn which committees are involved with each ward
+As a viewer of the site 
+I want to be able to see the committee pages of all committees that UC Berkeley Project Rishi serves 
+So that I can learn what each committee is
 
 Background: Comittees in database
 
@@ -11,7 +11,7 @@ Background: Comittees in database
   | Ecological Indian  |
   | Levees             |
   
-Scenario: CLick on the Projects link should redirect to committees page
+Scenario: A user is able to go to the committees page
     Given I am on the home page
     When I follow "PROJECTS"
     Then I should be on the committees page
@@ -21,7 +21,7 @@ Scenario: Seeing multiple committees on the committees page
     Then I should see "Ecological Indian"
     And I should see "Levees"
     
-Scenario: Click on the committee title should redirect to that committee page
+Scenario: A user is able to go to the specific committee page
     Given I am on the committees page
     When I follow "Levees"
     Then I should be on the Levees committee page
