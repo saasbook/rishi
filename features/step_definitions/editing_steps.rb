@@ -1,3 +1,5 @@
+require "rack_session_access/capybara"
+
 And /^I am in the members page/ do
     visit(members_path)
 end

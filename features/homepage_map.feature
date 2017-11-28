@@ -26,5 +26,3 @@ Background: wards have been added to database
 #   And I should see ward "Ward 2" on the map
 #   And I should see ward "Ward 3" on the map
 #   And I should see ward "Ward 4" on the map
-
-  
