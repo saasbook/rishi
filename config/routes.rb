@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'about', to: 'home#about'
+  get 'travel', to: 'home#travel'
   get 'signin', to: 'home#authen'
   
   # get 'home/index'
