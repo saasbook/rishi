@@ -17,6 +17,7 @@ module NavigationHelpers
     when /^the ProjectRishi page/ then 'http://www.projectrishi.org/'
     when /^the members page/ then '/members'
     when /^the committees page/ then '/committees'
+    when /^the travel page/ then '/travel'
     when /^the (.*) committee page/ 
       @cmt = Committee.find_by_name($1)
       committee_path(@cmt.id)

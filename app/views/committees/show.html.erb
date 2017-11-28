@@ -3,14 +3,13 @@
     <div class="introduction">
         <p><%= @text %></p>
     </div>
-    <div class="cmt_name"><%= @timeline %></div>
-    <hr>
 </div>
 
 <% if !current_user.nil? %>
     <% if current_user.role.eql? "internal" or current_user.role.eql? "executive" %>
         <%= puts "my id: "+current_user.uid %>
-        <h1><%= @timeline %></h1>
+        <div class="cmt_name"><%= @timeline %></div>
+        <hr>
     <% end %>
     <% if current_user.role.eql? "executive" %>
         <%= puts "my id: "+current_user.uid %>
