@@ -9,6 +9,7 @@ UserList.create(email: "akkhazan@berkeley.edu", role:"executive")
 UserList.create(email: "hunyaalakhani@berkeley.edu", role:"executive")
 UserList.create(email: "jnnancy233@berkeley.edu", role:"executive")
 UserList.create(email: "phari@berkeley.edu", role:"executive")
+UserList.create(email: "ssteiner@berkeley.edu", role:"executive")
 
 
 
