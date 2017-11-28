@@ -2,6 +2,7 @@ require 'simplecov'
 require "rack_session_access/capybara"
 require 'capybara/rspec'
 require 'capybara'
+require 'omniauth'
 SimpleCov.start 'rails'
 
 
