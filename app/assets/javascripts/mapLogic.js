@@ -1,16 +1,3 @@
-<%= include_gon %>
-<div class="top">
-    <input type="checkbox" id="waterCheckbox" onclick="toggleGroup('water')" CHECKED />water
-    <br/>
-    <input type="checkbox" id="womenCheckbox" onclick="toggleGroup('women')" CHECKED/>women
-</div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=<%=@api_key%>&callback=initMap"></script>
-<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-<script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
-<div id="map" style='width: 100%; height: 800px; margin:auto;'></div>
-
-<script type="text/javascript">
 var markerGroups = {
     "water": [],
     "women": []
@@ -121,6 +108,3 @@ function parseXml(str) {
 }
 
 var xmlStr = '<markers><marker name="water1" address="" lat="30.560554149332777" lng="77.52290278673172" type="water"/><marker name="women1" address="" lat="30.57" lng="77.524" type="women"/></markers>';
-
-
-</script>
