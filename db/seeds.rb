@@ -3,6 +3,10 @@ Ward.destroy_all
 Committee.destroy_all
 Coordinate.destroy_all
 
+c1 = Coordinate.create(lat:30.575864, lng:77.501478)
+com1 = Committee.create(name: 'Temple #1', category: 'poi')
+com1.coordinates << c1
+
 
 UserList.create(email: "acheema@berkeley.edu", role:"executive")
 UserList.create(email: "niraj.a.rao@berkeley.edu", role:"executive")
