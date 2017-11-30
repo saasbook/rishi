@@ -3,9 +3,30 @@ Ward.destroy_all
 Committee.destroy_all
 Coordinate.destroy_all
 
-c1 = Coordinate.create(lat:30.575864, lng:77.501478)
-com1 = Committee.create(name: 'Temple #1', category: 'poi')
-com1.coordinates << c1
+places_info = [['Temple #1', [30.575864, 77.501478], 'poi'],
+          ['Temple #2', [30.575679, 77.501371], 'poi'],
+    ['Terrace Farm', [30.574922, 77.516484], 'agriculture'],
+    ['Primary School Ward', [30.577421, 77.504928], 'education'],
+    ['Purli Primary School (Ward 1)', [30.577132, 77.505167], 'education'],
+    ['Greenhouse', [30.560902, 77.510453], 'poi'],
+    ['Anganwadi Ward 3', [30.560207, 77.510739], 'education'],
+    ['Computer Lab/Ayurvedic Center', [30.559006, 77.516603], 'education'],
+    ['Mahila Mandal', [30.559570, 77.516531], 'poi'],
+    ['Secondary School', [30.559061, 77.517062], 'education'],
+    ['PHC', [30.560069, 77.513733], 'health'],
+    ['Convenience Stores', [30.560246, 77.511274], 'cart'],
+    ['Anganwadi Ward 4', [30.561139, 77.523469], 'education'],
+    ['Primary School Ward 4', [30.560544, 77.525855], 'education'],
+    ['Anganwadi Ward 5', [30.555780, 77.536152], 'education']
+    ]
+    
+places_info.each do |place|
+    coord = Coordinate.create(:lat => "#{place[1][0]}", :lng => "#{place[1][1]}")
+    com = Committee.create(:name => "#{place[0]}", :category => "#{place[2]}")
+    com.coordinates << coord
+end
+
+
 
 
 UserList.create(email: "acheema@berkeley.edu", role:"executive")
