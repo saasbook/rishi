@@ -31,7 +31,10 @@ Project Rishi's site is built using Ruby on Rails. All needed packages are locat
 In the root project directory, create an application.yml file. You will need to define the following variables
 
 google_api_key: #GoogleMapsApiKey400837437240
+
 google_client_id: #OAuth Client ID
+
 google_client_secret: #Oauth Client Secret
+
 
 In order to access the internal sign in pages, please add your email to the UserList table within the seeds file.
