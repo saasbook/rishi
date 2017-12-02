@@ -34,7 +34,7 @@
     - @committees.each do |comm|
       - comm.coordinates.each do |coord|
         %tr
-          %td= comm.ward.name
+          %td= comm.category
           %td= comm.name
           %td= coord.lat
           %td= coord.lng
