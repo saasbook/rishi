@@ -23,3 +23,15 @@ More information about Project Rishi can be found here:
 
 http://www.projectrishi.org/
 https://www.facebook.com/ucbprojectrishi/
+
+## Deployment Notes
+
+Project Rishi's site is built using Ruby on Rails. All needed packages are located in the Gemfile. In order to use the Google Maps API and the Google Authentication API, we use Figaro to manage our authentication keys. 
+
+In the root project directory, create an application.yml file. You will need to define the following variables
+
+google_api_key: #GoogleMapsApiKey400837437240
+google_client_id: #OAuth Client ID
+google_client_secret: #Oauth Client Secret
+
+In order to access the internal sign in pages, please add your email to the UserList table within the seeds file.
