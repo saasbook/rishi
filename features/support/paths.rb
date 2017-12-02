@@ -19,7 +19,7 @@ module NavigationHelpers
     when /^the committees page/ then '/committees'
     when /^the travel page/ then '/travel'
     when /^the (.*) committee page/ 
-      @cmt = Committee.find_by_name($1)
+      @cmt = Project.find_by_name($1)
       committee_path(@cmt.id)
 
     # Add more mappings here.
