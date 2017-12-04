@@ -47,7 +47,7 @@ In order to access the internal sign in pages, please add your email to the User
 
 ## Project Authors
 
-This project was created in Fall 2017 under advising of UC Berkeley's CS 169. 
+This project was created in Fall 2017 under advising of UC Berkeley's CS 169: GSI Ben Mehne and Professor Armando Fox. 
 
 
 Adeel Cheema, Pranav Harikrishnan, Chittaranjan Prasad, Nan Jiang, Niraj Rao
