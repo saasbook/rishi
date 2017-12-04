@@ -29,30 +29,30 @@ var markerGroups = {
     "poi": []
     
 };
-/*
-var customIcons = {
-    water: {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
-    }
 
-    'health': {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
-    }
+var customIcons = {
     education: {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
-    }
-    empowerment: {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
-    }
+        icon: '/assets/education_small.png'
+    },
+    health: {
+        icon: '/assets/health_small.png'
+    },
     agriculture: {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
-    }
+        icon: '/assets/agriculture.png'
+    },
+    
+    water: {
+        icon: '/assets/logo_small.png'
+    },
+    empowerment: {
+        icon: '/assets/logo_small.png'
+    },
     poi: {
-        icon: 'https://www.fuzu.com/assets/fa-map-marker-grey-91117e2bdee2c15f30c08301128072c050af41ddb139b61a813702043e305ca9.png'
+        icon: '/assets/logo_small.png'
     }
 
 };
-*/
+
  
 function load() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -103,7 +103,6 @@ function load() {
         markerGroups[type].push(marker);
         bindInfoWindow(marker, map, infoWindow, html);
     }
-    map.fitBounds(bounds);
 }
 
 function bindInfoWindow(marker, map, infoWindow, html) {
