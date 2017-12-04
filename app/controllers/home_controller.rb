@@ -11,7 +11,6 @@ class HomeController < ApplicationController
     
     Committee.all.each do |c|
       if c.coordinates.size != 0
-      
         l = [c.name, c.category, c.coordinates.last.lat, c.coordinates.last.lng]
         markers << l
       end

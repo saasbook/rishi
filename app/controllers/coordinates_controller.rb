@@ -25,8 +25,8 @@ class CoordinatesController < ApplicationController
         input_category = return_category(params[:category])
         input_marker_name = return_marker_name(params[:marker])
         
-        if !Coordinate.exists?(:lat => input_lat, :lng => input_lng)
-            coord = Coordinate.create(:lat => input_lat, :lng => input_lng)
+        if !Coordinate.exists?(:lat => input_lat.to_f, :lng => input_lng.to_f)
+            coord = Coordinate.create(:lat => input_lat.to_f, :lng => input_lng.to_f)
             comm = Committee.create(:name => input_marker_name)
             comm.category = input_category
             comm.coordinates << coord
