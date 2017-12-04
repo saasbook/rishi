@@ -11,17 +11,95 @@ li{
     list-style: none;
 }
 
-.navbar li{
-    font-size: 150%;
-    float: right;
+#auth{
+    padding-top:0px;
+    padding-left:20px;
+}
+.auth{
+    color: white;
+    font-size: 95%;
+    border: none;
+    cursor: pointer;
+    outline-color: white;
     padding:10px;
+    margin-top: 15px;
+}
+#authen{
+    background-color:#49DC4B;
+}
+#authenc{
+    background-color:#49DC4B;
 }
 
-.wardsLst{
-    clear:right;
-    float:left;
+h1{
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	cursor: hand;
+	color: gray;
+
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
-.map_block{
-    float:left;
+body {
+	color: white;
+	font-size: 17px;
+	font-family: 'Lato', sans-serif;
 }
+
+.panetitle {
+	color: white;
+	font-size: 50px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+.panetitle {
+	color: white;
+	font-size: 50px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.panecaption {
+	color: #CCCCCC;
+	font-size: 15px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 50px;
+	margin-left: 10px;
+}
+
+.contentHolder p {
+	text-indent: 20px;
+	margin: 0 auto;
+	width: 40%;
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 100px;
+	position: relative;
+}
+
+p.introduction:first-letter {
+    font-family: 'Marcellus SC', serif;
+    font-size: 100px;
+    float: left;
+}
+
+p.introduction {
+	text-indent: 0px;
+}
+
+
+.bigpic {
+	width: 40%;
+	overflow: hidden;
+	margin:auto;
+}
+
+.bigpic img {
+	width: 100%;
+}
+

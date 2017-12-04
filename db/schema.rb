@@ -11,26 +11,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020200756) do
+ActiveRecord::Schema.define(version: 20171202114909) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name"
-    t.integer  "wards_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "image_url"
+    t.integer  "coordinate_id"
+    t.integer  "ward_id"
+    t.text     "intro"
+    t.string   "intro_img"
+    t.string   "category"
+  end
+
+  add_index "committees", ["coordinate_id"], name: "index_committees_on_coordinate_id"
+
+  create_table "coordinates", force: :cascade do |t|
+    t.float    "lat"
+    t.float    "lng"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "ward_id"
+    t.integer  "committee_id"
+  end
+
+  add_index "coordinates", ["committee_id"], name: "index_coordinates_on_committee_id"
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "intro"
+    t.string   "intro_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "coordinates", force: :cascade do |t|
-    t.integer  "ward_id"
-    t.float    "lat"
-    t.float    "lng"
+  create_table "user_lists", force: :cascade do |t|
+    t.string   "email"
+    t.string   "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.string   "role"
+    t.string   "email"
   end
 
   create_table "wards", force: :cascade do |t|
-    t.string "name"
-    t.string "color"
+    t.string  "name"
+    t.integer "committee_id"
+    t.integer "coordinate_id"
+    t.float   "ward_lat"
+    t.float   "ward_long"
   end
+
+  add_index "wards", ["committee_id"], name: "index_wards_on_committee_id"
+  add_index "wards", ["coordinate_id"], name: "index_wards_on_coordinate_id"
 
 end
