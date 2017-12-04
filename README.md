@@ -36,7 +36,7 @@ In order to use the Google Maps API and the Google Authentication API, we use Fi
 
 In the root project directory, create an application.yml file. You will need to define the following variables
 
-google_api_key: #GoogleMapsApiKey400837437240
+google_api_key: #GoogleMapsApiKey
 
 google_client_id: #OAuth2.0 Client ID
 
