@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table#markers {
-  margin: 10px;
+  margin-top: 2%;
   border-collapse: collapse;
   width: 100%;
   border-bottom: 2px solid black;
@@ -11,7 +11,7 @@ table#markers {
 table#markers th {
   border: 2px solid white;
   font-weight: bold;
-  background-color: wheat;
+  background-color: #21A54A ;
 }
 table#markers th, table#movies td {
   padding: 4px;
@@ -26,5 +26,20 @@ form label {
   display: block;
   line-height: 25px;
   font-weight: bold;
-  color: maroon;
+  color: white;
+  display: inline;
+}
+
+input[type=text] {
+  display: inline;
+  border: 1px solid #ffffff;
+}
+
+input[type=text]:focus {
+  border: 1px solid #21A54A;
+}
+
+h1 {
+  color: #ffffff;
+  margin-top: 2%;
 }
