@@ -19,6 +19,10 @@ https://berkeley-rishi.herokuapp.com/
 
 This app will serve as the homepage of Project Rishi's Berkeley chapter. The goal is to have the page showcase the work that has been done over the years in their deployment in India for the general public to see. They would also like an internal method that would allow Project Rishi members to update each other on their progress in preparation for their annual trip to india. 
 
+Update (October 2017): 
+
+The customer's business needs changed as they decided that their priority is the homepage map. The homepage map should be customizable and dynamic, allowing for more landmarks to be added and any user to customize their own map experience, such as with filtering of landmarks and filtering. 
+
 More information about Project Rishi can be found here:
 
 http://www.projectrishi.org/
