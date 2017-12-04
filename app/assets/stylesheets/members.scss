@@ -1,0 +1,45 @@
+// Place all the styles related to the Members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table#markers {
+  margin-top: 2%;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#markers th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: #21A54A ;
+}
+table#markers th, table#movies td {
+  padding: 4px;
+  text-align: left;
+}
+#notice #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: white;
+  display: inline;
+}
+
+input[type=text] {
+  display: inline;
+  border: 1px solid #ffffff;
+}
+
+input[type=text]:focus {
+  border: 1px solid #21A54A;
+}
+
+h1 {
+  color: #ffffff;
+  margin-top: 2%;
+}

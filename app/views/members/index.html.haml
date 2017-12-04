@@ -1,0 +1,38 @@
+%h1 Marker Editing
+
+= form_tag member_coordinates_path(:member_id => @member.id) do
+
+  = label :coordinate, :lat, 'Latitude'
+  = text_field :coordinate, 'latitude'
+  
+  = label :coordinate, :lng, 'Longitude'
+  = text_field :coordinate, 'longitude'
+
+  = label :category, :category, 'Category'
+  = text_field :category, 'category'
+
+  = label :marker, :name, 'Marker Name'
+  = text_field :marker, 'marker_name'
+
+  = submit_tag 'Add Marker', :id => "markers_submit"
+  
+%table#markers
+  %thead
+    %tr
+      %th Category
+      %th Name
+      %th Latitude
+      %th Longitude
+      %th Delete
+      %th Edit
+  %tbody
+    - @committees.each do |comm|
+      - comm.coordinates.each do |coord|
+        %tr
+          %td= comm.category
+          %td= comm.name
+          %td= coord.lat
+          %td= coord.lng
+          %td= button_to 'Delete', member_coordinate_path(:member_id => @member.id, :id => coord.id), :method => :delete, :confirm => 'Are you sure?', :id => 'delete_marker'
+          %td= link_to 'Edit', edit_member_coordinate_path(:member_id => @member.id, :id => coord.id), :id => 'edit_marker'
+= link_to 'Back to home page', root_path

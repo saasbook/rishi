@@ -2,11 +2,11 @@
 
 
 ## Project Statistics
-[![Maintainability](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/maintainability)](https://codeclimate.com/github/AdeelCheema/rishi/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/57cf52162801e0146fd2/maintainability)](https://codeclimate.com/github/AdeelCheema/Berkeley-Rishi/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c7927f95f7d7869fe64a/test_coverage)](https://codeclimate.com/github/AdeelCheema/rishi/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/57cf52162801e0146fd2/test_coverage)](https://codeclimate.com/github/AdeelCheema/Berkeley-Rishi/test_coverage)
 
-[![Build Status](https://travis-ci.org/AdeelCheema/rishi.svg?branch=master)](https://travis-ci.org/AdeelCheema/rishi)
+[![Build Status](https://travis-ci.org/AdeelCheema/Berkeley-Rishi.svg?branch=master)](https://travis-ci.org/AdeelCheema/Berkeley-Rishi)
 
 ## Pivotal Tracker
 [Project Rishi Pivotal Tracker](https://www.pivotaltracker.com/n/projects/2118222)
@@ -19,7 +19,40 @@ https://berkeley-rishi.herokuapp.com/
 
 This app will serve as the homepage of Project Rishi's Berkeley chapter. The goal is to have the page showcase the work that has been done over the years in their deployment in India for the general public to see. They would also like an internal method that would allow Project Rishi members to update each other on their progress in preparation for their annual trip to india. 
 
+Update (October 2017): 
+
+The customer's business needs changed as they decided that their priority is the homepage map. The homepage map should be customizable and dynamic, allowing for more landmarks to be added and any user to customize their own map experience, such as with filtering of landmarks and filtering. 
+
 More information about Project Rishi can be found here:
 
 http://www.projectrishi.org/
 https://www.facebook.com/ucbprojectrishi/
+
+## Deployment Notes
+
+Project Rishi's site is built using Ruby on Rails. All needed packages are located in the Gemfile. 
+
+Clone all repo files and run `bundle install --without production` and `rake db:setup` on your local machine. 
+
+In order to use the Google Maps API and the Google Authentication API securely, we use Figaro to manage authentication keys. 
+
+[Figaro](https://github.com/laserlemon/figaro)
+
+[Google API Documentation](https://developers.google.com/apis-explorer/)
+
+In the root project directory, create an application.yml file. You will need to define the following variables
+
+google_api_key: #GoogleMapsApiKey
+
+google_client_id: #OAuth2.0 Client ID
+
+google_client_secret: #Oauth2.0 Client Secret
+
+In order to access the internal sign in pages, please add your email to the UserList table within the seeds file.
+
+## Project Authors
+
+This project was created in Fall 2017 under advising of UC Berkeley's CS 169: GSI Ben Mehne and Professor Armando Fox. 
+
+
+Adeel Cheema, Pranav Harikrishnan, Chittaranjan Prasad, Nan Jiang, Niraj Rao
