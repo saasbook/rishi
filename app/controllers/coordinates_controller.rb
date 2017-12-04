@@ -11,8 +11,8 @@ class CoordinatesController < ApplicationController
         param[:longitude]
     end
     
-    def return_ward_name(param)
-        param[:ward_name]
+    def return_category(param)
+        param[:category]
     end
     
     def return_marker_name(param)
@@ -22,14 +22,13 @@ class CoordinatesController < ApplicationController
     def create
         input_lat = return_lat(params[:coordinate])
         input_lng = return_lng(params[:coordinate])
-        input_ward_name = return_ward_name(params[:ward])
+        input_category = return_category(params[:category])
         input_marker_name = return_marker_name(params[:marker])
         
         if !Coordinate.exists?(:lat => input_lat, :lng => input_lng)
-            ward = Ward.create(:name => input_ward_name)
             coord = Coordinate.create(:lat => input_lat, :lng => input_lng)
             comm = Committee.create(:name => input_marker_name)
-            comm.ward = ward
+            comm.category = input_category
             comm.coordinates << coord
             comm.save!
         else

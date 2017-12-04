@@ -1,10 +1,10 @@
-<% @committees.each do |committee| %>
+<% @projects.each do |proj| %>
     <div class=cmt>
-        <div class="picture"><img src=<%= image_path(committee.intro_img) %>></img></div>
-        <div class="cmt_name"><%= link_to committee.name, committee_path(committee) %></div>
+        <div class="picture"><img src=<%= image_path(proj.intro_img) %>></img></div>
+        <div class="cmt_name"><%= link_to proj.name, committee_path(proj) %></div>
         <hr>
         <div class="introduction">
-            <p><%= committee.intro %></p>
+            <p><%= proj.intro %></p>
         </div>
     </div>
 <% end %>

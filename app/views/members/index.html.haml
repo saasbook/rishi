@@ -3,7 +3,7 @@
   %span.closebtn{:onclick => "this.parentElement.style.display='none';"} ×
   #{flash[:notice]}
       
-%h1 Add New Marker
+%h1 Marker Editing
 
 = form_tag member_coordinates_path(:member_id => @member.id) do
 
@@ -13,8 +13,8 @@
   = label :coordinate, :lng, 'Longitude'
   = text_field :coordinate, 'longitude'
 
-  = label :ward, :ward_name, 'Ward Name'
-  = text_field :ward, 'ward_name'
+  = label :category, :category, 'Category'
+  = text_field :category, 'category'
 
   = label :marker, :name, 'Marker Name'
   = text_field :marker, 'marker_name'
@@ -24,7 +24,7 @@
 %table#markers
   %thead
     %tr
-      %th Ward
+      %th Category
       %th Name
       %th Latitude
       %th Longitude

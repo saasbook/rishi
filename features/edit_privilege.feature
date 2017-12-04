@@ -16,6 +16,12 @@ Background: Wards, Committees, and Coordinates in database
     | Education           |
     | Rainwater Harvesting|
 
+# @internal_test
+# Scenario: Go to map edit page
+#   Given I am logged in as an internal user
+#   And I am in the members page
+#   When I go to the home page
+#   Then I should see "Edit Map"
 
 @internal_test 
 Scenario: Inserting a marker
