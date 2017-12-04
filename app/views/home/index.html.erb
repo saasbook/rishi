@@ -12,7 +12,11 @@
     <br/>
     <input type="checkbox" id="poiCheckbox" onclick="toggleGroup('poi')" CHECKED/>Point of Interest
 </div>
-
+<div class="edit_map">
+    <% if !current_user.nil? and current_user.role.eql? 'internal'%>
+        <%= link_to "Edit Map", '/members' %>
+    <% end %>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=@api_key%>&callback=initMap"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
@@ -93,7 +97,7 @@ function load() {
         parseFloat(markers[i][3]));
         bounds.extend(point);
         var type = markers[i][1];
-        var html = "<b>" + name + "</b> <br/>" + address;
+        var html = "<b style='color:black'>" + name + "</b> <br/>" + address;
         var icon = customIcons[type] || {};
         var marker = new google.maps.Marker({
             map: map,

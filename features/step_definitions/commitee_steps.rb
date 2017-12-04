@@ -1,6 +1,6 @@
 Given /the following comittees exist/ do |committee_table|
   committee_table.hashes.each do |committee|
-    Committee.create(committee)
+    Project.create(committee)
   end
 end
 

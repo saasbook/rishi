@@ -18,7 +18,7 @@ Given /I am logged in as an (.*) user/ do |user|
 end
 
 Then /I should (not )?see (.*) progress/ do |no, committee|
-    @cmt = Committee.find_by_name(committee)
+    @cmt = Project.find_by_name(committee)
     if no
         page.should_not have_content("progress")
     else 
