@@ -124,9 +124,11 @@ function load() {
 
     var infoWindow = new google.maps.InfoWindow();
     var markers = gon.markers;
+    console.log(markers)
     var bounds = new google.maps.LatLngBounds();
     for (var i = 0; i < markers.length; i++) {
         var name = markers[i][0];
+        console.log(name);
         var address = "";
         var point = new google.maps.LatLng(
         parseFloat(markers[i][2]),
@@ -140,7 +142,12 @@ function load() {
             position: point,
             icon: icon.icon
         });
-        markerGroups[type].push(marker);
+        if (type in markerGroups) {
+            markerGroups[type].push(marker);
+        } else {
+            markerGroups[type] = []
+            markerGroups[type].push(marker);
+        }
         bindInfoWindow(marker, map, infoWindow, html);
     }
     map.fitBounds(bounds);
