@@ -26,15 +26,28 @@ https://www.facebook.com/ucbprojectrishi/
 
 ## Deployment Notes
 
-Project Rishi's site is built using Ruby on Rails. All needed packages are located in the Gemfile. In order to use the Google Maps API and the Google Authentication API, we use Figaro to manage our authentication keys. 
+Project Rishi's site is built using Ruby on Rails. All needed packages are located in the Gemfile. 
+
+In order to use the Google Maps API and the Google Authentication API, we use Figaro to manage our authentication keys. 
+
+[Figaro](https://github.com/laserlemon/figaro)
+
+[Google API Documentation](https://developers.google.com/apis-explorer/)
 
 In the root project directory, create an application.yml file. You will need to define the following variables
 
 google_api_key: #GoogleMapsApiKey400837437240
 
-google_client_id: #OAuth Client ID
+google_client_id: #OAuth2.0 Client ID
 
-google_client_secret: #Oauth Client Secret
+google_client_secret: #Oauth2.0 Client Secret
 
 
 In order to access the internal sign in pages, please add your email to the UserList table within the seeds file.
+
+## Project Authors
+
+This project was created in Fall 2017 under advising of UC Berkeley's CS 169. 
+
+
+Adeel Cheema, Pranav Harikrishnan, Chittaranjan Prasad, Nan Jiang, Niraj Rao
