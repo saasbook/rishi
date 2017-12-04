@@ -73,6 +73,7 @@ Before('@internal_test') do
     },
     :info => {
       :name => 'internal',
+      :email => 'jnnancy233@berkeley.edu'
     }
   })
   OmniAuth.config.mock_auth[:default] = OmniAuth.config.mock_auth[:google]
