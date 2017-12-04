@@ -1,16 +1,56 @@
 <%= include_gon %>
 <div class="top">
-    <input type="checkbox" id="waterCheckbox" onclick="toggleGroup('water')" CHECKED />Water
-    <br/>
-    <input type="checkbox" id="healthCheckbox" onclick="toggleGroup('health')" CHECKED/>Health
-    <br/>
-    <input type="checkbox" id="educationCheckbox" onclick="toggleGroup('education')" CHECKED/>Education
-    <br/>
-    <input type="checkbox" id="empowermentCheckbox" onclick="toggleGroup('empowerment')" CHECKED/>Empowerment
-    <br/>
-    <input type="checkbox" id="agricultureCheckbox" onclick="toggleGroup('agriculture')" CHECKED/>Agriculture
-    <br/>
-    <input type="checkbox" id="poiCheckbox" onclick="toggleGroup('poi')" CHECKED/>Point of Interest
+    <table>
+        <tr>
+            <td>
+                <h3>Water</h3>
+                <div class = "check">
+                    <input type="checkbox" id="waterCheckbox" onclick="toggleGroup('water')" CHECKED />
+                    <label for = "waterCheckbox"></label>
+                    <br/>
+                </div>
+            </td>
+            <td>
+                <h3>Empowerment</h3>
+                <div class = "check">
+                    <input type="checkbox" id="empowermentCheckbox" onclick="toggleGroup('empowerment')" CHECKED/>
+                    <label for = "empowermentCheckbox"></label>
+                    <br/>
+                </div>
+            </td>
+            <td>
+                <h3>Health</h3>
+                <div class = "check">
+                    <input type="checkbox" id="healthCheckbox" onclick="toggleGroup('health')" CHECKED/>
+                    <label for = "healthCheckbox"></label>
+                    <br/>
+                </div>
+            </td>
+            <td>
+                <h3>Education</h3>
+                <div class = "check">
+                    <input type="checkbox" id="educationCheckbox" onclick="toggleGroup('education')" CHECKED/>
+                    <label for = "educationCheckbox"></label>
+                    <br/>
+                </div>
+            </td>
+            <td>
+                <h3>Agriculture</h3>
+                <div class = "check">
+                    <input type="checkbox" id="agricultureCheckbox" onclick="toggleGroup('agriculture')" CHECKED/>
+                    <label for = "agricultureCheckbox"></label>
+                    <br/>
+                </div>
+            </td>
+            <td>
+                <h3>POI</h3>
+                <div class = "check">
+                    <input type="checkbox" id="poiCheckbox" onclick="toggleGroup('poi')" CHECKED/>
+                    <label for = "poiCheckbox"></label>
+                </div>
+            </td>
+        </tr>
+    </table>
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=@api_key%>&callback=initMap"></script>
