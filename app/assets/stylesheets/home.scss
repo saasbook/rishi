@@ -103,3 +103,64 @@ p.introduction {
 	width: 100%;
 }
 
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.check {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	margin: 20px 10px;
+	border-radius: 50px;
+	position: relative;
+}
+
+.check:before {
+	content: 'On';
+	position: absolute;
+	top: 12px;
+	left: 13px;
+	height: 2px;
+	color: #26ca28;
+	font-size: 16px;
+}
+
+.check:after {
+	content: 'Off';
+	position: absolute;
+	top: 12px;
+	left: 84px;
+	height: 2px;
+	color: #111;
+	font-size: 16px;
+}
+
+.check label {
+	display: block;
+	width: 52px;
+	height: 22px;
+	border-radius: 50px;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 9px;
+	z-index: 1;
+	background: #ddd;
+}
+
+.check input[type=checkbox]:checked + label {
+	left: 60px;
+	background: #26ca28;
+}
+
+.top {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.top h3 {
+	font-size: 16px;
+	text-align: center;
+}
+
