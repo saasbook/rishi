@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.3.0"
 
 gem 'coffee-rails', '~> 4.1.0'
 gem 'gon'
@@ -10,14 +11,13 @@ gem 'rails', '4.2.9'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'uglifier', '>= 1.3.0'
+gem 'figaro'
+gem 'gmaps4rails'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'byebug'
-  gem 'figaro'
-  gem 'gmaps4rails'
-  gem 'haml'
   gem 'jasmine-rails'
-  gem 'omniauth-google-oauth2'
   gem 'sqlite3'
 end
 
@@ -27,7 +27,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'metric_fu'
   gem 'rspec-rails', '3.4.2'
@@ -35,10 +34,6 @@ group :test do
 end
 
 group :production do
-  gem 'figaro'
-  gem 'gmaps4rails'
-  gem 'haml'
-  gem 'omniauth-google-oauth2'
   gem 'pg'
   gem 'rails_12factor'
 end
