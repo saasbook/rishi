@@ -1,6 +1,7 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Certain CSS taken from https://paulund.co.uk/style-checkboxes-with-css and https://www.w3schools.com/howto/howto_js_alert.asp
 a:link,a:visited {
     text-decoration: none;
     color: grey;
@@ -11,17 +12,156 @@ li{
     list-style: none;
 }
 
-.navbar li{
-    font-size: 150%;
-    float: right;
+#auth{
+    padding-top:0px;
+    padding-left:20px;
+}
+.auth{
+    color: white;
+    font-size: 95%;
+    border: none;
+    cursor: pointer;
+    outline-color: white;
     padding:10px;
+    margin-top: 15px;
+}
+#authen{
+    background-color:#49DC4B;
+}
+#authenc{
+    background-color:#49DC4B;
 }
 
-.wardsLst{
-    clear:right;
-    float:left;
+h1{
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	cursor: hand;
+	color: gray;
+
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
-.map_block{
-    float:left;
+body {
+	color: white;
+	font-size: 17px;
+	font-family: 'Lato', sans-serif;
 }
+
+.panetitle {
+	color: white;
+	font-size: 50px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+.panetitle {
+	color: white;
+	font-size: 50px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.panecaption {
+	color: #CCCCCC;
+	font-size: 15px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 50px;
+	margin-left: 10px;
+}
+
+.contentHolder p {
+	text-indent: 20px;
+	margin: 0 auto;
+	width: 40%;
+	font-size: 22px;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 100px;
+	position: relative;
+}
+
+p.introduction:first-letter {
+    font-family: 'Marcellus SC', serif;
+    font-size: 100px;
+    float: left;
+}
+
+p.introduction {
+	text-indent: 0px;
+}
+
+
+.bigpic {
+	width: 40%;
+	overflow: hidden;
+	margin:auto;
+}
+
+.bigpic img {
+	width: 100%;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.check {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	margin: 20px 10px;
+	border-radius: 50px;
+	position: relative;
+}
+
+.check:before {
+	content: 'On';
+	position: absolute;
+	top: 12px;
+	left: 13px;
+	height: 2px;
+	color: #26ca28;
+	font-size: 16px;
+}
+
+.check:after {
+	content: 'Off';
+	position: absolute;
+	top: 12px;
+	left: 84px;
+	height: 2px;
+	color: #111;
+	font-size: 16px;
+}
+
+.check label {
+	display: block;
+	width: 52px;
+	height: 22px;
+	border-radius: 50px;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 9px;
+	z-index: 1;
+	background: #ddd;
+}
+
+.check input[type=checkbox]:checked + label {
+	left: 60px;
+	background: #26ca28;
+}
+
+.top {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.top h3 {
+	font-size: 16px;
+	text-align: center;
+}
+
